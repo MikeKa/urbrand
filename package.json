@@ -33,7 +33,10 @@
     "test"
   ],
   "dependencies": {
+    "clean-webpack-plugin": "^0.1.16",
+    "copy-webpack-plugin": "^4.0.1",
     "express": "^4.15.2",
+    "html-webpack-plugin": "^2.29.0",
     "material-ui": "^0.18.1",
     "prop-types": "^15.5.8",
     "react": "^15.5.3",
