@@ -49,7 +49,7 @@ class List extends React.Component {
                 </Link>
               </li>
             ))}
-          </Flexview>
+          </FlexView>
         </ul>
       </div>
     )
