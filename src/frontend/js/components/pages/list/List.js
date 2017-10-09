@@ -39,7 +39,6 @@ class List extends React.Component {
           errorMessage={this.props.errorMessage}
         />
         <ul className="items">
-          <FlexView column height={120} hAlignContent='center' vAlignContent='center'>
             {shopItems.map((item) => (
               <li key={item.name}>
                 <Link to={`/detail/${category}/${item.name}`}>
@@ -49,7 +48,6 @@ class List extends React.Component {
                 </Link>
               </li>
             ))}
-          </FlexView>
         </ul>
       </div>
     )
