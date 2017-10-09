@@ -16,7 +16,7 @@ module.exports = {
     contentBase: false,
     port: 9000,
     proxy: {
-      '/api': 'http://localhost:3000',
+      '/api': 'http://localhost:5858',
     },
     historyApiFallback: true,
     hot: true,
@@ -63,6 +63,10 @@ module.exports = {
         loader: 'file-loader',
         options: { name: 'img/[name].[ext]' },
       },
+      {
+          test: /\.css$/,
+          loader: 'style-loader!css-loader',
+        },
     ]
   },
   plugins: [

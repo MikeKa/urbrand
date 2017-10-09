@@ -38,7 +38,7 @@ app.get('/*', (req, res) => {
 
 // app settings and bootstrap
 
-app.set('port', (process.env.PORT || 3000))
+app.set('port', (process.env.PORT || 5858))
 
 app.listen(app.get('port'), function() {
   // eslint-disable-next-line no-console
