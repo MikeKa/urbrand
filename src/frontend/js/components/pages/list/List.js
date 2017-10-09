@@ -4,6 +4,8 @@ import { Link } from 'react-router-dom'
 
 import Heading from './Heading'
 
+import FlexView from 'react-flexview'
+
 class List extends React.Component {
   constructor(props) {
     super(props)
@@ -37,15 +39,17 @@ class List extends React.Component {
           errorMessage={this.props.errorMessage}
         />
         <ul className="items">
-          {shopItems.map((item) => (
-            <li key={item.name}>
-              <Link to={`/detail/${category}/${item.name}`}>
-                <img src={item.image} alt="" />
-                <div className="title">{item.title}</div>
-                <span className="price">${item.price.toFixed(2)}</span>
-              </Link>
-            </li>
-          ))}
+          <FlexView column height={120} hAlignContent='center' vAlignContent='center'>
+            {shopItems.map((item) => (
+              <li key={item.name}>
+                <Link to={`/detail/${category}/${item.name}`}>
+                  <img src={item.image} alt="" />
+                  <div className="title">{item.title}</div>
+                  <span className="price">${item.price.toFixed(2)}</span>
+                </Link>
+              </li>
+            ))}
+          </Flexview>
         </ul>
       </div>
     )
