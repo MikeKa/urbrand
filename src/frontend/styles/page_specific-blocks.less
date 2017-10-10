@@ -54,10 +54,11 @@ section.main {
 		width: 100%;
 
 		.billboard {
-			max-height: 320px;
+			height: 120px;
 
 			&.mens_outerwear {
 				background: url(../img/mens_outerwear.jpg) no-repeat 50% 50%;
+				
 			}
 
 			&.ladies_outerwear {
@@ -122,6 +123,12 @@ section.main {
 						color: @color-font-secondary;
 						line-height: 1.5;
 					}
+				}
+				@media only screen and (min-device-width : 415px) and (max-device-width : 768px) {
+					width: calc(~"100% / 2");
+				}
+				@media only screen and (max-device-width : 414px) {
+					width: calc(~"100% / 1");
 				}
 			}
 		}
