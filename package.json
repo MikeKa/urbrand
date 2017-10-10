@@ -18,6 +18,7 @@
   "scripts": {
     "start": "node src/backend/app.js",
     "server:dev": "nodemon src/backend/app.js",
+    "stop": "taskkill /F /IM node.exe",
     "server:wds": "webpack-dev-server --config webpack.dev.js --progress",
     "test": "jest src",
     "test:e2e": "jest e2e",
@@ -95,6 +96,7 @@
     "jest": "^20.0.4",
     "less": "^2.7.2",
     "less-loader": "^4.0.5",
+    "nodemon": "^1.12.1",
     "postcss-loader": "^2.0.6",
     "pre-commit": "^1.2.2",
     "react-test-renderer": "^15.6.1",
