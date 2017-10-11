@@ -5,6 +5,8 @@ const app = express()
 
 // middleware
 
+app.use(app.router)
+
 app.use(
   express.static(
     path.resolve(__dirname, '../../dist')
