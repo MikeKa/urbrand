@@ -2,8 +2,7 @@ import { connect } from 'react-redux'
 
 import * as actionCreators from '../../../redux/action-creators'
 import { getShopItemsByCategory } from '../../../redux/reducers'
-//import List from './List'
-import List from '/List'
+import List from './List'
 
 const mapStateToProps = (state, ownProps) => {
   return {
