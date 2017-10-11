@@ -11,6 +11,8 @@ app.use(
   )
 )
 
+app.set('etag', 'strong')
+
 // routing
 
 app.get('/api/shop_items/category/:category', (req, res) => {
