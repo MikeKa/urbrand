@@ -11,7 +11,7 @@ app.use(
   )
 )
 
-app.set('etag', 'strong')
+app.disable('etag')
 
 // routing
 
