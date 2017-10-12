@@ -12,16 +12,17 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 module.exports = {
   context: __dirname,
   devtool: 'source-map',
+  entry: ['whatwg-fetch', './src/frontend/js/index.js'],
   devServer: {
     contentBase: false,
     port: 9000,
     proxy: {
+      '/api': 'http://192.168.1.85:5858',
       '/api': 'http://localhost:5858',
     },
     historyApiFallback: true,
     hot: true,
   },
-  entry: './src/frontend/js/index.js',
   output: {
     path: path.join(__dirname, '/dist'),
     filename: 'bundle.[hash].js',

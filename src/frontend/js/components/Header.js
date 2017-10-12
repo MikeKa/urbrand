@@ -1,11 +1,16 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { Link, withRouter } from 'react-router-dom'
+
+import getMuiTheme from 'material-ui/styles/getMuiTheme';
 import FlatButton from 'material-ui/FlatButton'
 import { Tabs, Tab } from 'material-ui/Tabs'
 
+
+
 import { colors } from '../common-styles'
 import HeaderCart from './HeaderCart'
+
 
 class Header extends React.Component {
  static propTypes = {
@@ -144,10 +149,10 @@ class Header extends React.Component {
             tabItemContainerStyle={tabItemContainerStyle}
             value={this.state.selectedTabValue}
           >
-            <Tab label="Men's Outerwear" style={{ fontSize: '2vmin' }} value="mens_outerwear" onClick={() => { this.handleTabClick('mens_outerwear') }} />
-            <Tab label="Ladies Outerwear" style={{ fontSize: '2vmin' }} value="ladies_outerwear" onClick={() => { this.handleTabClick('ladies_outerwear') }} />
-            <Tab label="Men's T-Shirts" style={{ fontSize: '2vmin' }} value="mens_tshirts" onClick={() => { this.handleTabClick('mens_tshirts') }} />
-            <Tab label="Ladies T-Shirts" style={{ fontSize: '2vmin' }} value="ladies_tshirts" onClick={() => { this.handleTabClick('ladies_tshirts') }} />
+            <Tab label="Men's Outerwear" style={{ fontSize: '3vmin' }} value="mens_outerwear" onClick={() => { this.handleTabClick('mens_outerwear') }} />
+            <Tab label="Ladies Outerwear" style={{ fontSize: '3vmin' }} value="ladies_outerwear" onClick={() => { this.handleTabClick('ladies_outerwear') }} />
+            <Tab label="Men's T-Shirts" style={{ fontSize: '3vmin' }} value="mens_tshirts" onClick={() => { this.handleTabClick('mens_tshirts') }} />
+            <Tab label="Ladies T-Shirts" style={{ fontSize: '3vmin' }} value="ladies_tshirts" onClick={() => { this.handleTabClick('ladies_tshirts') }} />
           </Tabs>
         </div>
       </header>

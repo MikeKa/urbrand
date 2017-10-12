@@ -13,13 +13,6 @@ app.use(
 
 app.disable('etag')
 
-app.use(function(req, res, next) {
-  //delete all headers related to cache
-  req.headers['if-none-match'] = '';
-  req.headers['if-modified-since'] = '';
-  next();    
-});
-
 // routing
 
 app.get('/api/shop_items/category/:category', (req, res) => {
