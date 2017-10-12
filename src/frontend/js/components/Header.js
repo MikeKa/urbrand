@@ -138,7 +138,7 @@ class Header extends React.Component {
           </h1>
           <HeaderCart itemsCount={this.calculateCartItemsCount()} />
         </div>
-        <div className="nav" style={{ visibility: this.isNavigationVisible() ? 'visible' : 'hidden' }}>
+        <div className="nav" style={whiteSpace: normal, { visibility: this.isNavigationVisible() ? 'visible' : 'hidden' }}>
           <Tabs
             inkBarStyle={inkBarStyle}
             tabItemContainerStyle={tabItemContainerStyle}
