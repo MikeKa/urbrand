@@ -6,6 +6,8 @@ import thunk from 'redux-thunk'
 // import { createLogger } from 'redux-logger'
 
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
+import getMuiTheme from 'material-ui/styles/getMuiTheme';
+
 import injectTapEventPlugin from 'react-tap-event-plugin'
 
 import App from './components/App'
@@ -13,6 +15,13 @@ import rootReducer from './redux/reducers'
 
 // material-ui's implementation detail
 injectTapEventPlugin()
+
+const muiTheme = getMuiTheme({
+    Tabs: {
+      fontSize: '12px',
+    },
+  });
+
 
 const middlewares = [ thunk ]
 // if (process.env.NODE_ENV !== 'production') {
@@ -26,7 +35,7 @@ const store = createStore(
 )
 
 ReactDOM.render(
-  <MuiThemeProvider>
+  <MuiThemeProvider muiTheme={muiTheme}>
     <Provider store={store}>
       <App />
     </Provider>

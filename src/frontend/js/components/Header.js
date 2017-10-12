@@ -138,16 +138,16 @@ class Header extends React.Component {
           </h1>
           <HeaderCart itemsCount={this.calculateCartItemsCount()} />
         </div>
-        <div className="nav" style={whiteSpace: normal, { visibility: this.isNavigationVisible() ? 'visible' : 'hidden' }}>
+        <div className="nav" style={{visibility: this.isNavigationVisible() ? 'visible' : 'hidden'}}>
           <Tabs
             inkBarStyle={inkBarStyle}
             tabItemContainerStyle={tabItemContainerStyle}
             value={this.state.selectedTabValue}
           >
-            <Tab label="Men's Outerwear" value="mens_outerwear" onClick={() => { this.handleTabClick('mens_outerwear') }} />
-            <Tab label="Ladies Outerwear" value="ladies_outerwear" onClick={() => { this.handleTabClick('ladies_outerwear') }} />
-            <Tab label="Men's T-Shirts" value="mens_tshirts" onClick={() => { this.handleTabClick('mens_tshirts') }} />
-            <Tab label="Ladies T-Shirts" value="ladies_tshirts" onClick={() => { this.handleTabClick('ladies_tshirts') }} />
+            <Tab label="Men's Outerwear" style={{ fontSize: '2vmin' }} value="mens_outerwear" onClick={() => { this.handleTabClick('mens_outerwear') }} />
+            <Tab label="Ladies Outerwear" style={{ fontSize: '2vmin' }} value="ladies_outerwear" onClick={() => { this.handleTabClick('ladies_outerwear') }} />
+            <Tab label="Men's T-Shirts" style={{ fontSize: '2vmin' }} value="mens_tshirts" onClick={() => { this.handleTabClick('mens_tshirts') }} />
+            <Tab label="Ladies T-Shirts" style={{ fontSize: '2vmin' }} value="ladies_tshirts" onClick={() => { this.handleTabClick('ladies_tshirts') }} />
           </Tabs>
         </div>
       </header>

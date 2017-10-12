@@ -72,7 +72,7 @@
     "redux-thunk": "^2.2.0",
     "style-loader": "^0.18.2",
     "webpack": "^3.1.0",
-    "webpack-dev-server": "^2.6.1"
+    "webpack-dev-server": "^2.6.1",
     "whatwg-fetch": "^2.0.3"
   },
   "devDependencies": {
@@ -104,7 +104,7 @@
     "selenium-webdriver": "^3.5.0",
     "style-loader": "^0.18.2",
     "webpack": "^3.6.0",
-    "webpack-dev-server": "^2.6.1"
+    "webpack-dev-server": "^2.6.1",
     "whatwg-fetch": "^2.0.3"
   }
 }
