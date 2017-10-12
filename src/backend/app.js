@@ -11,8 +11,6 @@ app.use(
   )
 )
 
-app.disable('etag')
-
 // routing
 
 app.get('/api/shop_items/category/:category', (req, res) => {
