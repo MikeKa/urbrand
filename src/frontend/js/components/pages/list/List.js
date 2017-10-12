@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 
 import Heading from './Heading'
 
-import FlexView from 'react-flexview'
+//import FlexView from 'react-flexview'
 
 class List extends React.Component {
   constructor(props) {

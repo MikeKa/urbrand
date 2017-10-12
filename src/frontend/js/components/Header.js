@@ -126,6 +126,7 @@ class Header extends React.Component {
 
     const tabItemContainerStyle = {
       backgroundColor: colors.fontPrimary,
+      whiteSpace: normal,
     }
 
     return (
