@@ -12,7 +12,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 module.exports = {
   context: __dirname,
   devtool: 'source-map',
-  entry: './src/frontend/js/index.js',
+  entry: ['whatwg-fetch', './src/frontend/js/index.js'],
   output: {
     path: path.join(__dirname, '/dist'),
     filename: 'bundle.[hash].js',
