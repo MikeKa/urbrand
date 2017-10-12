@@ -83,7 +83,7 @@ export default class Detail extends React.Component {
             <div className="price">
               {this.props.shopItem ? '$' + this.props.shopItem.price.toFixed(2) : loadingText}
             </div>
-            <form onSubmit={e => e.preventDefault()}>
+            <form>
               <div className="size">
                 <SelectField
                   {...selectFieldDefaultProps}
