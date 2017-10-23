@@ -77,66 +77,63 @@ export default class Detail extends React.Component {
             />
           </div>
           <div className="col text">
-            <h1>
-              {this.props.shopItem ? this.props.shopItem.title : loadingText}
-            </h1>
-            <div className="price">
-              {this.props.shopItem ? '$' + this.props.shopItem.price.toFixed(2) : loadingText}
+            <div className="row">
+              <h1>
+                {this.props.shopItem ? this.props.shopItem.title : loadingText}
+              </h1>
+              <div className="price">
+                {this.props.shopItem ? '$' + this.props.shopItem.price.toFixed(2) : loadingText}
+              </div>
             </div>
+              <form onSubmit={e => e.preventDefault()}>
+                <div className="size">
+                  <SelectField
+                    {...selectFieldDefaultProps}
+                    className="ui-control"
+                    floatingLabelText="Size"
+                    value={this.state.size}
+                    onChange={this.handleSizeChange}
+                  >
+                    <MenuItem value={'XS'} primaryText="XS" />
+                    <MenuItem value={'S'} primaryText="S" />
+                    <MenuItem value={'M'} primaryText="M" />
+                    <MenuItem value={'L'} primaryText="L" />
+                    <MenuItem value={'XL'} primaryText="XL" />
+                  </SelectField>
+                  {/* this element is used in e2e tests */}
+                  <div className="hidden-value">{this.state.size}</div>
+                </div>
+                <div className="quantity">
+                  <SelectField
+                    {...selectFieldDefaultProps}
+                    className="ui-control"
+                    floatingLabelText="Quantity"
+                    value={this.state.quantity}
+                    onChange={this.handleQuantityChange}
+                  >
+                    <MenuItem value={1} primaryText="1" />
+                    <MenuItem value={2} primaryText="2" />
+                    <MenuItem value={3} primaryText="3" />
+                    <MenuItem value={4} primaryText="4" />
+                    <MenuItem value={5} primaryText="5" />
+                  </SelectField>
+                  {/* this element is used in e2e tests */}
+                  <div className="hidden-value">{this.state.quantity}</div>
+                </div>
+                <div className="description">
+                  <h2>Description</h2>
+                  <div className="desc" dangerouslySetInnerHTML={this.createDescriptionMarkup()}></div>
+                </div>
+                <RaisedButton
+                  {...raisedButtonDefaultProps}
+                  className="add_to_cart-btn"
+                  label="Add to Cart"
+                  onClick={this.handleAddBtnClick}
+                />
+              </form>
           </div>
         </div>
-        <div className="row">
-          <div className="col empty">
-          </div>
-          <div className="col form">
-            <form onSubmit={e => e.preventDefault()}>
-              <div className="size">
-                <SelectField
-                  {...selectFieldDefaultProps}
-                  className="ui-control"
-                  floatingLabelText="Size"
-                  value={this.state.size}
-                  onChange={this.handleSizeChange}
-                >
-                  <MenuItem value={'XS'} primaryText="XS" />
-                  <MenuItem value={'S'} primaryText="S" />
-                  <MenuItem value={'M'} primaryText="M" />
-                  <MenuItem value={'L'} primaryText="L" />
-                  <MenuItem value={'XL'} primaryText="XL" />
-                </SelectField>
-                {/* this element is used in e2e tests */}
-                <div className="hidden-value">{this.state.size}</div>
-              </div>
-              <div className="quantity">
-                <SelectField
-                  {...selectFieldDefaultProps}
-                  className="ui-control"
-                  floatingLabelText="Quantity"
-                  value={this.state.quantity}
-                  onChange={this.handleQuantityChange}
-                >
-                  <MenuItem value={1} primaryText="1" />
-                  <MenuItem value={2} primaryText="2" />
-                  <MenuItem value={3} primaryText="3" />
-                  <MenuItem value={4} primaryText="4" />
-                  <MenuItem value={5} primaryText="5" />
-                </SelectField>
-                {/* this element is used in e2e tests */}
-                <div className="hidden-value">{this.state.quantity}</div>
-              </div>
-              <div className="description">
-                <h2>Description</h2>
-                <div className="desc" dangerouslySetInnerHTML={this.createDescriptionMarkup()}></div>
-              </div>
-              <RaisedButton
-                {...raisedButtonDefaultProps}
-                className="add_to_cart-btn"
-                label="Add to Cart"
-                onClick={this.handleAddBtnClick}
-              />
-            </form>
-          </div>
-        </div>
+        
         <PostActionDialog
           isOpen={this.state.isDialogOpen}
           onClose={this.closeDialog}
