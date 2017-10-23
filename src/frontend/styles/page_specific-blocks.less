@@ -131,16 +131,15 @@ section.main {
 
 	.content.detail {
 		.row {
-			width: 1128px;
-			margin: 0 auto;
+			width: 100%;
+			padding: 10%;
 
 			.col {
 				float: left;
-				margin: 20px 10%px;
 			}
 
 			.col.image {
-				width: 80%;
+				width: 50%;
 
 				img {
 					width: 100%;
@@ -148,9 +147,15 @@ section.main {
 					line-height: 1.5;
 				}
 			}
+			.col.empty {
+				width: 50%;
+				@media only screen and (max-device-width : 414px) {
+					width: 0%;
+				}
+			}
 
 			.col.text {
-				width: 80%;
+				width: 50%;
 
 				h1 {
 					font-size: 24px;
@@ -166,7 +171,7 @@ section.main {
 				}
 
 				.description {
-					margin-top: 33px;
+					margin-top: 20px;
 					line-height: 1.5;
 
 					h2 {
@@ -187,9 +192,14 @@ section.main {
 						}
 					}
 				}
-
+			}
+			.col.form {
+				width: 50%;
+				@media only screen and (max-device-width : 414px) {
+					width: 100%;
+				}
 				.add_to_cart-btn {
-					margin-top: 32px;
+					margin-top: 18px;
 				}
 			}
 		}
