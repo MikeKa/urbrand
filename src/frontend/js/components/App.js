@@ -14,7 +14,7 @@ import PageNotFound from './pages/PageNotFound'
 
 import storageHelper from '../utils/storage-helper'
 import '../../styles/index.less'
-//import 'react-flexview/lib/flexView.css' // FlexView is useless without its style
+import 'react-flexview/lib/flexView.css' // FlexView is useless without its style
 
 export default class App extends React.Component {
   constructor(props) {

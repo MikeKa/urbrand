@@ -100,6 +100,7 @@
     "nodemon": "^1.12.1",
     "postcss-loader": "^2.0.6",
     "pre-commit": "^1.2.2",
+    "react-flexview": "^1.0.13",
     "react-test-renderer": "^15.6.1",
     "selenium-webdriver": "^3.5.0",
     "style-loader": "^0.18.2",

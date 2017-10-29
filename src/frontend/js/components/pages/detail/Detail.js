@@ -5,8 +5,10 @@ import RaisedButton from 'material-ui/RaisedButton'
 import SelectField from 'material-ui/SelectField'
 import MenuItem from 'material-ui/MenuItem'
 
-import { raisedButtonDefaultProps, selectFieldDefaultProps } from '../../../common-styles'
+import { raisedButtonDefaultProps, selectFieldDefaultProps, flexDetailsProps } from '../../../common-styles'
 import PostActionDialog from './PostActionDialog'
+
+//import FlexView from 'react-flexview'
 
 export default class Detail extends React.Component {
   static propTypes = {
@@ -63,7 +65,7 @@ export default class Detail extends React.Component {
 
     return { __html: descriptionText }
   }
-
+  
   render() {
     const loadingText = 'Loading data...'
 
@@ -77,7 +79,6 @@ export default class Detail extends React.Component {
             />
           </div>
           <div className="col text">
-            <div className="row">
               <h1>
                 {this.props.shopItem ? this.props.shopItem.title : loadingText}
               </h1>
@@ -85,6 +86,7 @@ export default class Detail extends React.Component {
                 {this.props.shopItem ? '$' + this.props.shopItem.price.toFixed(2) : loadingText}
               </div>
             </div>
+            <div className="col form">
               <form onSubmit={e => e.preventDefault()}>
                 <div className="size">
                   <SelectField
@@ -120,18 +122,18 @@ export default class Detail extends React.Component {
                   {/* this element is used in e2e tests */}
                   <div className="hidden-value">{this.state.quantity}</div>
                 </div>
+                <RaisedButton
+                {...raisedButtonDefaultProps}
+                className="add_to_cart-btn"
+                label="Add to Cart"
+                onClick={this.handleAddBtnClick}
+              />
                 <div className="description">
                   <h2>Description</h2>
                   <div className="desc" dangerouslySetInnerHTML={this.createDescriptionMarkup()}></div>
                 </div>
-                <RaisedButton
-                  {...raisedButtonDefaultProps}
-                  className="add_to_cart-btn"
-                  label="Add to Cart"
-                  onClick={this.handleAddBtnClick}
-                />
               </form>
-          </div>
+            </div>
         </div>
         
         <PostActionDialog

@@ -43,17 +43,20 @@ export default class CartItem extends React.Component {
  render() {
     return (
       <li>
+
         <div className="left">
           <Link className="image" to={`/detail/${this.props.item.itemData.category}/${this.props.item.itemData.name}`}>
             <img src={this.props.item.itemData.image} />
           </Link>
-          <Link className="name" to={`/detail/${this.props.item.itemData.category}/${this.props.item.itemData.name}`}>
-            { this.props.item.itemData.title }
-          </Link>
         </div>
         <div className="right">
-          <div className="quantity">
+            <div className="name">
+              <Link to={`/detail/${this.props.item.itemData.category}/${this.props.item.itemData.name}`}>
+                { this.props.item.itemData.title }
+              </Link>
+            </div>
             <div className="label">Qty:</div>
+            <div className="quantity">
             <SelectField
               {...selectFieldDefaultProps}
               underlineStyle={{ visibility: 'hidden' }}
